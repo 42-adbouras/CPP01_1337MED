@@ -6,7 +6,7 @@
 /*   By: adbouras <adbouras@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 18:55:15 by adbouras          #+#    #+#             */
-/*   Updated: 2024/09/27 20:15:33 by adbouras         ###   ########.fr       */
+/*   Updated: 2024/09/28 12:57:28 by adbouras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,6 @@ Zombie::~Zombie( void )
 	static int nb;
 	
     std::cout << name;
-	std::cout << "[" << ++nb << "]";
+	std::cout << "[" << ++nb << "]: ";
 	std::cout << "Bit the dust!" << std::endl; 
 }

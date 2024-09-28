@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: adbouras <adbouras@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/09/27 18:21:14 by adbouras          #+#    #+#              #
-#    Updated: 2024/09/28 17:20:19 by adbouras         ###   ########.fr        #
+#    Created: 2024/09/28 13:07:06 by adbouras          #+#    #+#              #
+#    Updated: 2024/09/28 16:48:52 by adbouras         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,17 +15,14 @@ YLW	= \033[1;93m
 RED	= \033[1;91m
 CYN = \033[1;96m
 RST	= \033[0;39m
-CLN	= \033[K\r\c
 
 CC = c++
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = zombies
+NAME = brain
 
-SRC = Zombie.cpp      main.cpp        zombieHorde.cpp
-
-NCLD = Zombie.hpp
+SRC = main.cpp 
 
 OBJ_DIR = objects/
 
@@ -33,17 +30,15 @@ OBJ = $(addprefix $(OBJ_DIR), $(SRC:.cpp=.o))
 
 all:$(NAME)
 
-$(OBJ_DIR)%.o:%.cpp $(NCLD)
+$(OBJ_DIR)%.o:%.cpp
 	@mkdir -p $(OBJ_DIR)
-	@echo "$(YLW)[Genarating object file $@]$(RST)\r\c"
+	@echo "$(YLW)[Genarating object file $@]$(RST)"
 	@$(CC) $(CFLAGS) -c $< -o $@
-	@echo "$(CLN)"
 
 $(NAME): $(OBJ)
-	@echo "$(YLW)[Compiling $(NAME)]$(RST)\r\c"
+	@echo "$(YLW)[Compiling $(NAME)]$(RST)"
 	@$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 	@echo "$(GRN)[Compiled successfully, to run, execute: ./$(NAME)]$(RST)"
-	@echo "$(CLN)"
 
 clean:
 	@rm -rf $(OBJ_DIR)

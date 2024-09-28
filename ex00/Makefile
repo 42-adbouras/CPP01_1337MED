@@ -6,7 +6,7 @@
 #    By: adbouras <adbouras@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/27 16:05:00 by adbouras          #+#    #+#              #
-#    Updated: 2024/09/27 18:15:57 by adbouras         ###   ########.fr        #
+#    Updated: 2024/09/27 18:31:15 by adbouras         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ CC = c++
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98 -fsanitize=address -g
 
-NAME = zombies
+NAME = zombie
 
 SRC = main.cpp randomChump.cpp Zombie.cpp newZombie.cpp
 

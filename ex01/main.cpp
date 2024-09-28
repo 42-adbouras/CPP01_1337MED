@@ -6,7 +6,7 @@
 /*   By: adbouras <adbouras@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 18:27:28 by adbouras          #+#    #+#             */
-/*   Updated: 2024/09/27 19:52:27 by adbouras         ###   ########.fr       */
+/*   Updated: 2024/09/28 13:01:41 by adbouras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	main(int ac, char **av)
 	if (ac > 1)
 	{
 		nbHord = atoi(av[1]);
-		name = "Stalker";
+		name = "unamedHorde";
 		if (av[2])
 			name = av[2];
 		horde = zombieHorde(nbHord, name);
@@ -37,4 +37,5 @@ int	main(int ac, char **av)
 	}
 	else
 		std::cout << "The World Is A Better Place." << std::endl;
+	while(1);
 }
