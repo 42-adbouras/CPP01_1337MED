@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adbouras <adbouras@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/27 18:34:54 by adbouras          #+#    #+#             */
-/*   Updated: 2024/09/28 17:40:34 by adbouras         ###   ########.fr       */
+/*   Created: 2024/09/28 17:42:54 by adbouras          #+#    #+#             */
+/*   Updated: 2024/09/28 17:47:57 by adbouras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,20 +15,13 @@
 #include <iostream>
 #include <string>
 
-
 typedef std::string	str;
 
-class Zombie
+class Weapon
 {
 public:
-	void	announce( int i);
-	str		get_name( void );
-	void	set_name( str name );
-	Zombie			( void ) { };
-	Zombie			(str name);
-	~Zombie			( void );
+	str		getType( void );
+	void	setType( str type );
 private:
-	str	name;	
+	str		type;	
 };
-
-Zombie* zombieHorde( int N, std::string name );
