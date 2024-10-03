@@ -6,16 +6,17 @@
 /*   By: adbouras <adbouras@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 18:55:15 by adbouras          #+#    #+#             */
-/*   Updated: 2024/09/28 12:57:28 by adbouras         ###   ########.fr       */
+/*   Updated: 2024/10/02 15:32:28 by adbouras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
+#include <iomanip>
 
 void	Zombie::announce( int i )
 {
 	std::cout << get_name();
-	std::cout << "[" << i << "]";
+	std::cout << "[" << std::setw(2) << std::setfill('0') << i << "]";
 	std::cout << ": BraiiiiiiinnnzzzZ..." << std::endl;
 }
 
@@ -26,6 +27,6 @@ Zombie::~Zombie( void )
 	static int nb;
 	
     std::cout << name;
-	std::cout << "[" << ++nb << "]: ";
+	std::cout << "[" << std::setw(2) << std::setfill('0') << ++nb << "]: ";
 	std::cout << "Bit the dust!" << std::endl; 
 }

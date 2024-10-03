@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   HumanB.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adbouras <adbouras@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/27 16:18:19 by adbouras          #+#    #+#             */
-/*   Updated: 2024/10/02 15:18:14 by adbouras         ###   ########.fr       */
+/*   Created: 2024/10/02 19:49:40 by adbouras          #+#    #+#             */
+/*   Updated: 2024/10/03 11:14:38 by adbouras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#pragma once
 
-int	main( void )
+#include "Weapon.hpp"
+
+class HumanB
 {
-	Zombie* _new;
-	_new = newZombie("Adam");
-	_new->announce();
-	randomChump("Bouras");
-	delete _new;
-	return (0);
-}
+public:
+	void	attack( void );
+	void	setWeapon( Weapon& weapon );
+	HumanB	( str name );
+private:
+	str		_name;
+	Weapon	*_weapon;
+};

@@ -6,7 +6,7 @@
 /*   By: adbouras <adbouras@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 18:27:28 by adbouras          #+#    #+#             */
-/*   Updated: 2024/09/28 13:01:41 by adbouras         ###   ########.fr       */
+/*   Updated: 2024/10/02 15:28:31 by adbouras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,4 @@ int	main(int ac, char **av)
 	}
 	else
 		std::cout << "The World Is A Better Place." << std::endl;
-	while(1);
 }

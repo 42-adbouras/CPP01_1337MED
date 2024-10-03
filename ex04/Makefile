@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: adbouras <adbouras@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/09/28 17:27:19 by adbouras          #+#    #+#              #
-#    Updated: 2024/10/03 10:14:38 by adbouras         ###   ########.fr        #
+#    Created: 2024/10/03 13:11:38 by adbouras          #+#    #+#              #
+#    Updated: 2024/10/03 13:23:24 by adbouras         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,11 +21,11 @@ CC = c++
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = violence
+NAME = replace
 
-SRC = HumanA.cpp HumanB.cpp Weapon.cpp main.cpp
+SRC = main.cpp
 
-NCLD = ./includes/HumanA.hpp ./includes/HumanB.hpp ./includes/Weapon.hpp
+NCLD = 
 
 OBJ_DIR = objects/
 

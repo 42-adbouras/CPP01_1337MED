@@ -6,11 +6,12 @@
 /*   By: adbouras <adbouras@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 17:42:27 by adbouras          #+#    #+#             */
-/*   Updated: 2024/09/28 17:50:40 by adbouras         ###   ########.fr       */
+/*   Updated: 2024/10/03 11:01:06 by adbouras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Weapon.hpp"
+#include "./includes/Weapon.hpp"
 
-str		Weapon::getType( void )		{ return (type)		; }
-void	Weapon::setType( str type )	{ this->type = type	; }
+const str&	Weapon::getType() const { return (type); }
+void				Weapon::setType( str type )	{ this->type = type	; }
+Weapon::Weapon( str type) { setType(type); }

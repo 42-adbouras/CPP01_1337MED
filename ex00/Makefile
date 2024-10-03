@@ -6,7 +6,7 @@
 #    By: adbouras <adbouras@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/27 16:05:00 by adbouras          #+#    #+#              #
-#    Updated: 2024/09/27 18:31:15 by adbouras         ###   ########.fr        #
+#    Updated: 2024/10/02 15:19:55 by adbouras         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ RST	= \033[0;39m
 
 CC = c++
 
-CFLAGS = -Wall -Wextra -Werror -std=c++98 -fsanitize=address -g
+CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 NAME = zombie
 

@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.hpp                                         :+:      :+:    :+:   */
+/*   HumanA.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adbouras <adbouras@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/28 17:42:54 by adbouras          #+#    #+#             */
-/*   Updated: 2024/09/28 17:47:57 by adbouras         ###   ########.fr       */
+/*   Created: 2024/09/28 17:52:10 by adbouras          #+#    #+#             */
+/*   Updated: 2024/10/03 11:08:31 by adbouras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include <iostream>
-#include <string>
+#include "Weapon.hpp"
 
-typedef std::string	str;
-
-class Weapon
+class HumanA
 {
 public:
-	str		getType( void );
-	void	setType( str type );
+	void	attack( void );
+	HumanA	( str name, Weapon &weapon);
 private:
-	str		type;	
+	str		_name;
+	Weapon	&_weapon;
 };
