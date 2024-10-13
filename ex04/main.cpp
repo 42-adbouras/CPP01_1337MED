@@ -6,7 +6,7 @@
 /*   By: adbouras <adbouras@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 13:11:18 by adbouras          #+#    #+#             */
-/*   Updated: 2024/10/03 14:50:52 by adbouras         ###   ########.fr       */
+/*   Updated: 2024/10/11 19:10:58 by adbouras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ int	main(int ac, char **av)
 	std::ifstream	surcFile(av[1]);
 	std::ofstream	destFile(std::string(av[1]) + ".replace");
 	std::string		line;
+    std::string		newLine;
 
 	if (ac != 4)
 		std::cout << "Invalide Agruments!" << std::endl;
@@ -34,7 +35,6 @@ int	main(int ac, char **av)
 		// while (getline(surcFile, line))
 		// 	destFile << line << std::endl;
 		while (getline(surcFile, line)) {
-            std::string newLine;
             for (size_t i = 0; i < line.size(); ++i) {
                 if (line.substr(i, strlen(av[2])) == av[2]) {
                     newLine += av[3];
