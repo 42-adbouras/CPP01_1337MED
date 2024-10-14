@@ -6,7 +6,7 @@
 #    By: adbouras <adbouras@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/03 13:11:38 by adbouras          #+#    #+#              #
-#    Updated: 2024/10/03 13:23:24 by adbouras         ###   ########.fr        #
+#    Updated: 2024/10/14 11:04:43 by adbouras         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,15 +25,13 @@ NAME = replace
 
 SRC = main.cpp
 
-NCLD = 
-
 OBJ_DIR = objects/
 
 OBJ = $(addprefix $(OBJ_DIR), $(SRC:.cpp=.o))
 
 all:$(NAME)
 
-$(OBJ_DIR)%.o:%.cpp $(NCLD)
+$(OBJ_DIR)%.o:%.cpp
 	@mkdir -p $(OBJ_DIR)
 	@echo "$(YLW)[Genarating object file $@]$(RST)\r\c"
 	@$(CC) $(CFLAGS) -c $< -o $@

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: adbouras <adbouras@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/11 19:43:28 by adbouras          #+#    #+#             */
-/*   Updated: 2024/10/13 21:48:58 by adbouras         ###   ########.fr       */
+/*   Created: 2024/10/13 18:18:46 by adbouras          #+#    #+#             */
+/*   Updated: 2024/10/14 11:42:40 by adbouras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,9 @@
 #define WARNING	"I think I deserve to have some extra bacon for free.\nI’ve been coming for years whereas you started working here since last month."
 #define ERROR	"This is unacceptable! I want to speak to the manager now."
 
-extern std::string	g_levels[4];
+typedef std::string str;
+
+extern str	g_levels[4];
 
 class	Harl
 {
@@ -30,5 +32,5 @@ private:
 	void warning( void );
 	void error( void );
 public:
-	void complain( std::string level );
+	void complain( str level );
 };

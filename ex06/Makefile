@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: adbouras <adbouras@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/10/11 20:14:41 by adbouras          #+#    #+#              #
-#    Updated: 2024/10/14 11:04:27 by adbouras         ###   ########.fr        #
+#    Created: 2024/10/13 18:19:17 by adbouras          #+#    #+#              #
+#    Updated: 2024/10/13 18:21:45 by adbouras         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ CC = c++
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = harl
+NAME = harlFilter
 
 SRC = Harl.cpp main.cpp
 

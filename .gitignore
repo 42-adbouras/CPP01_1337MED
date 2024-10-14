@@ -1,0 +1,12 @@
+*.o
+*.txt*
+objects/
+.DS_Store
+.vscode
+zombie
+zombies
+brain
+violence
+replace
+harl
+harlFilter

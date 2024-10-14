@@ -5,32 +5,36 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: adbouras <adbouras@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/11 19:46:20 by adbouras          #+#    #+#             */
-/*   Updated: 2024/10/14 10:41:49 by adbouras         ###   ########.fr       */
+/*   Created: 2024/10/13 18:18:42 by adbouras          #+#    #+#             */
+/*   Updated: 2024/10/14 11:42:50 by adbouras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Harl.hpp"
 
-const std::string	g_levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
+str	g_levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
 
 void	Harl::debug( void ) {
+	std::cout << "[ DEBUG ]" << std::endl;
 	std::cout << DEBUG << std::endl;
 }
 
 void	Harl::info( void ) {
+	std::cout << "[ INFO ]" << std::endl;
 	std::cout << INFO << std::endl;
 }
 
 void	Harl::warning( void ) {
+	std::cout << "[ WARNING ]" << std::endl;
 	std::cout << WARNING << std::endl;
 }
 
 void	Harl::error( void ) {
+	std::cout << "[ ERROR ]" << std::endl;
 	std::cout << ERROR << std::endl;
 }
 
-void	Harl::complain( std::string level )
+void	Harl::complain( str level )
 {
 	void	(Harl::*ptr[4])(void) = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
 

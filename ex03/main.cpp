@@ -6,7 +6,7 @@
 /*   By: adbouras <adbouras@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 19:47:10 by adbouras          #+#    #+#             */
-/*   Updated: 2024/10/03 11:18:14 by adbouras         ###   ########.fr       */
+/*   Updated: 2024/10/14 11:40:46 by adbouras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "./includes/HumanA.hpp"
 #include "./includes/HumanB.hpp"
 
-int main()
+int main( void )
 {
 	{
 		Weapon club = Weapon("crude spiked club");
