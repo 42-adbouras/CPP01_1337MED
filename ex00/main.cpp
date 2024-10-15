@@ -6,7 +6,7 @@
 /*   By: adbouras <adbouras@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 16:18:19 by adbouras          #+#    #+#             */
-/*   Updated: 2024/10/14 12:55:15 by adbouras         ###   ########.fr       */
+/*   Updated: 2024/10/14 14:52:51 by adbouras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ int	main( void )
 {
 	Zombie* _new;
 
-	_new = newZombie("Stalker");
+	_new = newZombie("Crawler");
 	_new->announce();
-	randomChump("Runner");
+	randomChump("Hazmat");
 	delete _new;
 }

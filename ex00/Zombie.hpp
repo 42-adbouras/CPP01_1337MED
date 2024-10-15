@@ -6,7 +6,7 @@
 /*   By: adbouras <adbouras@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 16:27:50 by adbouras          #+#    #+#             */
-/*   Updated: 2024/09/27 18:40:06 by adbouras         ###   ########.fr       */
+/*   Updated: 2024/10/14 14:55:07 by adbouras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ public:
 	Zombie			(str name);
 	~Zombie			( void );
 private:
-	std::string	name;	
+	str	name;	
 };
 
-Zombie* newZombie( std::string name );
-void randomChump( std::string name );
+Zombie*		newZombie( str name );
+void		randomChump( str name );

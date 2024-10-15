@@ -6,7 +6,7 @@
 /*   By: adbouras <adbouras@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 13:11:18 by adbouras          #+#    #+#             */
-/*   Updated: 2024/10/11 19:10:58 by adbouras         ###   ########.fr       */
+/*   Updated: 2024/10/15 13:10:20 by adbouras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,38 +14,48 @@
 #include <fstream>
 #include <string>
 
+std::string	ft_replace(std::string& line, char *arg, char *replace);
+
 int	main(int ac, char **av)
 {
 	std::ifstream	surcFile(av[1]);
-	std::ofstream	destFile(std::string(av[1]) + ".replace");
 	std::string		line;
-    std::string		newLine;
 
 	if (ac != 4)
 		std::cout << "Invalide Agruments!" << std::endl;
 	else {
+
+		std::ofstream	destFile(std::string(av[1]) + ".replace");
 		if (!surcFile) {
 			std::cerr << "Unable to open " << av[1] << std::endl;
 			return (1);
 		}
 		if (!destFile) {
-			std::cerr << "Unable to open " << "file.replace" << std::endl;
+			std::cerr << "Unable to open " << av[1] << ".replace" << std::endl;
 			return (1);
 		}
-		// while (getline(surcFile, line))
-		// 	destFile << line << std::endl;
-		while (getline(surcFile, line)) {
-            for (size_t i = 0; i < line.size(); ++i) {
-                if (line.substr(i, strlen(av[2])) == av[2]) {
-                    newLine += av[3];
-                    i += strlen(av[2]) - 1;
-                } else {
-                    newLine += line[i];
-                }
-            }
-            destFile << newLine << std::endl;
-        }
+		while (getline(surcFile, line))
+		{
+			destFile << ft_replace(line, av[2], av[3]) << std::endl;
+		}
 		surcFile.close();
 		destFile.close();
 	}
+}
+
+std::string	ft_replace(std::string& line, char *arg, char *replace)
+{
+	std::string newLine;
+
+	for (size_t i = 0; i < line.size(); i++)
+	{
+		if (line.substr(i, strlen(arg)) == arg)
+		{
+			newLine += replace;
+			i += strlen(arg) - 1;
+		} else {
+			newLine += line[i];
+		}
+    }
+	return (newLine);
 }
