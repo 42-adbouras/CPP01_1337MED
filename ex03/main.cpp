@@ -6,7 +6,7 @@
 /*   By: adbouras <adbouras@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 19:47:10 by adbouras          #+#    #+#             */
-/*   Updated: 2024/10/14 11:40:46 by adbouras         ###   ########.fr       */
+/*   Updated: 2024/10/15 15:26:59 by adbouras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,4 @@ int main( void )
 		jim.attack();
 		club.setType("some other type of club"); jim.attack();
 	}
-	return 0;
 }

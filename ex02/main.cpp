@@ -6,7 +6,7 @@
 /*   By: adbouras <adbouras@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 13:09:01 by adbouras          #+#    #+#             */
-/*   Updated: 2024/09/28 13:33:02 by adbouras         ###   ########.fr       */
+/*   Updated: 2024/10/15 15:26:32 by adbouras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,4 @@ int	main( void )
 	std::cout << str		<< std::endl;
 	std::cout << *stringPTR	<< std::endl;
 	std::cout << stringREF	<< std::endl;
-	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: adbouras <adbouras@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 12:24:38 by adbouras          #+#    #+#             */
-/*   Updated: 2024/10/14 13:52:08 by adbouras         ###   ########.fr       */
+/*   Updated: 2024/10/15 13:51:31 by adbouras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 void randomChump( str name )
 {
-	Zombie	new_zombie(name);
-	new_zombie.announce();
+	Zombie	_new(name);
+	_new.announce();
 }

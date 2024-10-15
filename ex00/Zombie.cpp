@@ -6,14 +6,13 @@
 /*   By: adbouras <adbouras@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 16:40:12 by adbouras          #+#    #+#             */
-/*   Updated: 2024/10/02 15:21:11 by adbouras         ###   ########.fr       */
+/*   Updated: 2024/10/15 13:52:00 by adbouras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-void	Zombie::announce( void )
-{
+void	Zombie::announce( void ) {
 	std::cout << get_name() << ": BraiiiiiiinnnzzzZ..." << std::endl;
 }
 
