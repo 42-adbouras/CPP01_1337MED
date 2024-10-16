@@ -6,7 +6,7 @@
 /*   By: adbouras <adbouras@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 13:11:18 by adbouras          #+#    #+#             */
-/*   Updated: 2024/10/15 13:10:20 by adbouras         ###   ########.fr       */
+/*   Updated: 2024/10/16 13:38:17 by adbouras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 #include <fstream>
 #include <string>
 
-std::string	ft_replace(std::string& line, char *arg, char *replace);
+std::string	ft_replace( std::string& line, char *arg, char *replace );
 
-int	main(int ac, char **av)
+int	main( int ac, char **av )
 {
 	std::ifstream	surcFile(av[1]);
 	std::string		line;
@@ -25,17 +25,16 @@ int	main(int ac, char **av)
 		std::cout << "Invalide Agruments!" << std::endl;
 	else {
 
-		std::ofstream	destFile(std::string(av[1]) + ".replace");
 		if (!surcFile) {
 			std::cerr << "Unable to open " << av[1] << std::endl;
 			return (1);
 		}
+		std::ofstream	destFile(std::string(av[1]) + ".replace");
 		if (!destFile) {
 			std::cerr << "Unable to open " << av[1] << ".replace" << std::endl;
 			return (1);
 		}
-		while (getline(surcFile, line))
-		{
+		while (getline(surcFile, line)) {
 			destFile << ft_replace(line, av[2], av[3]) << std::endl;
 		}
 		surcFile.close();
@@ -43,7 +42,7 @@ int	main(int ac, char **av)
 	}
 }
 
-std::string	ft_replace(std::string& line, char *arg, char *replace)
+std::string	ft_replace( std::string& line, char *arg, char *replace )
 {
 	std::string newLine;
 
@@ -56,6 +55,6 @@ std::string	ft_replace(std::string& line, char *arg, char *replace)
 		} else {
 			newLine += line[i];
 		}
-    }
+	}
 	return (newLine);
 }

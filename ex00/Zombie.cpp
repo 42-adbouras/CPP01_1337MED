@@ -6,7 +6,7 @@
 /*   By: adbouras <adbouras@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 16:40:12 by adbouras          #+#    #+#             */
-/*   Updated: 2024/10/15 13:52:00 by adbouras         ###   ########.fr       */
+/*   Updated: 2024/10/16 13:24:19 by adbouras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,4 +20,6 @@ str	Zombie::get_name( void ) { return (name); }
 
 Zombie::Zombie( str name ) { this->name = name; }
 
-Zombie::~Zombie( void ) { std::cout << name << ": Bit the dust!" << std::endl; }
+Zombie::~Zombie( void ) {
+	std::cout << get_name() << ": Bit the dust!" << std::endl;
+}
