@@ -6,14 +6,13 @@
 /*   By: adbouras <adbouras@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 12:24:38 by adbouras          #+#    #+#             */
-/*   Updated: 2024/10/15 13:51:31 by adbouras         ###   ########.fr       */
+/*   Updated: 2024/10/16 22:47:14 by adbouras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-void randomChump( str name )
-{
+void randomChump( str name ) {
 	Zombie	_new(name);
 	_new.announce();
 }

@@ -6,7 +6,7 @@
 /*   By: adbouras <adbouras@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/13 18:18:42 by adbouras          #+#    #+#             */
-/*   Updated: 2024/10/14 11:42:50 by adbouras         ###   ########.fr       */
+/*   Updated: 2024/10/16 22:49:23 by adbouras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,10 +38,8 @@ void	Harl::complain( str level )
 {
 	void	(Harl::*ptr[4])(void) = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
 
-	for (int i = 0; i < 4; i++)
-	{
-		if (g_levels[i] == level)
-		{
+	for (int i = 0; i < 4; i++) {
+		if (g_levels[i] == level) {
 			(this->*ptr[i])();
 			return ;
 		}

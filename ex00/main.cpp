@@ -6,14 +6,14 @@
 /*   By: adbouras <adbouras@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 16:18:19 by adbouras          #+#    #+#             */
-/*   Updated: 2024/10/16 13:25:56 by adbouras         ###   ########.fr       */
+/*   Updated: 2024/10/16 22:47:27 by adbouras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-int	main( void )
-{
+int	main( void ) {
+
 	Zombie* _new;
 
 	_new = newZombie("Walker");
