@@ -6,7 +6,7 @@
 /*   By: adbouras <adbouras@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/13 18:18:49 by adbouras          #+#    #+#             */
-/*   Updated: 2024/10/14 12:23:10 by adbouras         ###   ########.fr       */
+/*   Updated: 2024/10/17 11:36:47 by adbouras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 static void	argError( void );
 static int	get_level( str arg );
 
-int	main( int ac, char **av )
-{
+int	main( int ac, char **av ) {
+
 	Harl	harl;
 	int		level;
 
@@ -43,12 +43,11 @@ static void	argError( void ) {
 	exit(1);
 }
 
-static int	get_level( str arg )
-{
-	const str	levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
-
+static int	get_level( str arg ) {
+	if (arg.empty())
+		return (-1);
 	for (int i = 0; i < 4; i++) {
-		if (arg == levels[i])
+		if (arg == g_levels[i])
 			return (i);
 	}
 	return (-1);

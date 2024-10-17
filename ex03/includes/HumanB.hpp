@@ -6,7 +6,7 @@
 /*   By: adbouras <adbouras@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 19:49:40 by adbouras          #+#    #+#             */
-/*   Updated: 2024/10/16 12:38:27 by adbouras         ###   ########.fr       */
+/*   Updated: 2024/10/17 12:13:28 by adbouras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,7 @@
 
 #include "Weapon.hpp"
 
-class HumanB
-{
+class HumanB {
 public:
 	void	attack( void );
 	void	setWeapon( Weapon& weapon );

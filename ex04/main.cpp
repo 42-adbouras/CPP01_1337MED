@@ -6,7 +6,7 @@
 /*   By: adbouras <adbouras@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 13:11:18 by adbouras          #+#    #+#             */
-/*   Updated: 2024/10/16 19:49:06 by adbouras         ###   ########.fr       */
+/*   Updated: 2024/10/17 13:13:25 by adbouras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,14 @@
 
 std::string	ft_replace( std::string& line, char *arg, char *replace );
 
-int	main( int ac, char **av )
-{
+int	main( int ac, char **av ) {
+
 	std::ifstream	surcFile(av[1]);
 	std::string		line;
 
-	if (ac != 4)
+	if (ac < 4 || !av[2][0])
 		std::cout << "Invalide Agruments!" << std::endl;
 	else {
-
 		if (!surcFile) {
 			std::cerr << "Unable to open " << av[1] << std::endl;
 			return (1);
@@ -42,13 +41,14 @@ int	main( int ac, char **av )
 	}
 }
 
-std::string	ft_replace( std::string& line, char *arg, char *replace )
-{
+std::string	ft_replace( std::string& line, char *arg, char *replace ) {
 	std::string newLine;
+	std::string temp;
 
 	for (size_t i = 0; i < line.size(); i++)
 	{
-		if (line.substr(i, strlen(arg)) == arg) {
+		temp = line.substr(i, strlen(arg));
+		if (temp == arg) {
 			newLine += replace;
 			i += strlen(arg) - 1;
 		} else {

@@ -6,7 +6,7 @@
 #    By: adbouras <adbouras@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/27 18:21:14 by adbouras          #+#    #+#              #
-#    Updated: 2024/09/28 17:20:19 by adbouras         ###   ########.fr        #
+#    Updated: 2024/10/17 11:55:47 by adbouras         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,7 +42,7 @@ $(OBJ_DIR)%.o:%.cpp $(NCLD)
 $(NAME): $(OBJ)
 	@echo "$(YLW)[Compiling $(NAME)]$(RST)\r\c"
 	@$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
-	@echo "$(GRN)[Compiled successfully, to run, execute: ./$(NAME)]$(RST)"
+	@echo "$(GRN)[Compiled successfully, to run, execute: ./$(NAME) <hordeSize> <hordeName>]$(RST)"
 	@echo "$(CLN)"
 
 clean:

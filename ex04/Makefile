@@ -6,7 +6,7 @@
 #    By: adbouras <adbouras@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/03 13:11:38 by adbouras          #+#    #+#              #
-#    Updated: 2024/10/14 11:04:43 by adbouras         ###   ########.fr        #
+#    Updated: 2024/10/17 13:10:22 by adbouras         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,7 +40,7 @@ $(OBJ_DIR)%.o:%.cpp
 $(NAME): $(OBJ)
 	@echo "$(YLW)[Compiling $(NAME)]$(RST)\r\c"
 	@$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
-	@echo "$(GRN)[Compiled successfully, to run, execute: ./$(NAME)]$(RST)"
+	@echo "$(GRN)[Compiled successfully, to run, execute: ./$(NAME) <fileName> <s1> <s2>]$(RST)"
 	@echo "$(CLN)"
 
 clean:
