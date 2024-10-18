@@ -59,13 +59,27 @@ Examples:
 
 int main( void ) {
     Zombie *new_zombie = new Zombie("name"); // Dynamically allocates a Zombie class object
-    delete[] new_zombie; // Deallocate the memory
+    delete new_zombie; // Deallocate the memory
 }
 
 ```
 Note: When an object's memory is freed, its destructor is called implicitly.
 # ex01
-Just like in ex00, this time we need to allocate N Zombie objects in a single allocation, meaning we will be creating an array of the Zombie class with a size of N.
+Just like in ex00, this time we need to allocate `N` `Zombie` objects in a single allocation, meaning we will be creating an array of the Zombie class with a size of `N`.\
+**Functions Use:**\
+`new <type>[size]`:Returns a pointer to the first element of the allocated specified `<type>`, with the given `size`.\
+`delete []`: Deallocates the memory previously allocated for an array using `new`. It ensures that the destructors for each element are called, preventing memory leaks.
+Examples:
+```cpp
+#include <iostream>
+#include "Zombie.hpp"
+
+int main( void ) {
+    Zombie *zombieHorde = new Zombie[15]; // Dynamically allocates an array of 15 Zombie objects
+    delete []zombieHorde; // Deallocate the memory
+}
+```
+
 # ex02
 # ex03
 In C++, both pointers `(*)` and references `(&)` can be used to refer to another variable. However, they have different properties and are best used in different situations.
