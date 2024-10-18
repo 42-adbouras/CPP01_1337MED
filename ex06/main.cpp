@@ -6,7 +6,7 @@
 /*   By: adbouras <adbouras@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/13 18:18:49 by adbouras          #+#    #+#             */
-/*   Updated: 2024/10/17 11:36:47 by adbouras         ###   ########.fr       */
+/*   Updated: 2024/10/17 14:20:43 by adbouras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 static void	argError( void );
 static int	get_level( str arg );
+str	g_levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
 
 int	main( int ac, char **av ) {
 

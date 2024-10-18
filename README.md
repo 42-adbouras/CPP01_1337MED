@@ -72,13 +72,14 @@ In C++, both pointers `(*)` and references `(&)` can be used to refer to another
 
 * Use a pointer (Weapon *weapon) when:
 
-You want the ability to reassign the pointer to a different object. In your HumanB class, the _weapon member is a pointer, which allows the setWeapon method to change the weapon that HumanB is holding.
-You need to express that the object might not exist. A pointer can be nullptr, indicating that it doesn't point to any object. This can be useful for optional members, or before the object has been created.
+You want the ability to reassign the pointer to a different object. In `HumanB` class, the `_weapon` member is a pointer, which allows the `setWeapon` method to change the weapon that `HumanB` is holding.
+You need to express that the object might not exist. A pointer can be `nullptr`, indicating that it doesn't point to any object. This can be useful for optional members, or before the object has been created.
 * Use a reference (Weapon &weapon) when:
 
-You want to ensure that the reference always refers to a valid object. References cannot be nullptr, and once a reference is initialized to an object, it cannot be changed to refer to a different object. This is used in your HumanA class, where each HumanA always has a weapon, and the weapon cannot be changed after the HumanA is created.
+You want to ensure that the reference always refers to a valid object. References can not be `nullptr`, and once a reference is initialized to an object, it can not be changed to refer to a different object. This is used in `HumanA` class, where each `HumanA` always has a weapon, and the weapon can not be changed after the `HumanA` is created.
 You want to avoid dealing with pointer syntax. References can be used just like the original variable, without needing to dereference them.\
-In this exersice, HumanA uses a reference to Weapon because each HumanA is always created with a weapon, and that weapon can not be changed. HumanB uses a pointer to Weapon because a HumanB can be created without a weapon, and a weapon can be assigned later with setWeapon.
+In this exersice, `HumanA` uses a reference to `Weapon` because each `HumanA` is always created with a weapon, and that weapon can not be changed. `HumanB` uses a pointer to Weapon because a `HumanB` can be created without a weapon, and a weapon can be assigned later with `setWeapon`.
+
 # ex04
 # ex05
 # ex06

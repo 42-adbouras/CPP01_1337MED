@@ -6,7 +6,7 @@
 /*   By: adbouras <adbouras@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 19:46:20 by adbouras          #+#    #+#             */
-/*   Updated: 2024/10/16 22:44:11 by adbouras         ###   ########.fr       */
+/*   Updated: 2024/10/17 14:22:35 by adbouras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,7 @@ void	Harl::error( void ) {
 	std::cout << ERROR << std::endl;
 }
 
-void	Harl::complain( std::string level )
-{
+void	Harl::complain( std::string level ) {
 	void	(Harl::*levelPtr[4])( void ) = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
 
 	for (int i = 0; i < 4; i++) {

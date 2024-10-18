@@ -6,13 +6,11 @@
 /*   By: adbouras <adbouras@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/13 18:18:42 by adbouras          #+#    #+#             */
-/*   Updated: 2024/10/17 11:24:01 by adbouras         ###   ########.fr       */
+/*   Updated: 2024/10/17 14:20:12 by adbouras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Harl.hpp"
-
-str	g_levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
 
 void	Harl::debug( void ) {
 	std::cout << "[ DEBUG ]" << std::endl;
