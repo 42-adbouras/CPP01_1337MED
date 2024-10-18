@@ -6,7 +6,7 @@
 /*   By: adbouras <adbouras@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 18:34:54 by adbouras          #+#    #+#             */
-/*   Updated: 2024/10/15 13:59:00 by adbouras         ###   ########.fr       */
+/*   Updated: 2024/10/18 19:46:21 by adbouras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include <iostream>
 #include <iomanip>
 #include <string>
-
+#include <cctype>
 
 typedef std::string	str;
 
@@ -32,4 +32,4 @@ private:
 	str	name;	
 };
 
-Zombie* zombieHorde( int N, std::string name );
+Zombie* zombieHorde( int N, str name );

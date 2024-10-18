@@ -1,7 +1,13 @@
 ## ToC
 - [ex00](#ex00)
+	- [Zombie class implementation](#zombie-class-implementation)
+	- [Memory Allocation](#memory-allocation)
+		- Static Memory Allocation
+		- Dynamic Memory Allocation
 - [ex01](#ex01)
 - [ex02](#ex02)
+	- [References](#references)
+	- [Differences Between Pointers and References](#differences-between-pointers-and-references)
 - [ex03](#ex03)
 - [ex04](#ex04)
 - [ex05](#ex05)
@@ -63,7 +69,7 @@ int main( void ) {
 }
 
 ```
-Note: When an object's memory is freed, its destructor is called implicitly.
+*Note: When an object's memory is freed, its destructor is called implicitly.*
 # ex01
 Just like in ex00, this time we need to allocate `N` `Zombie` objects in a single allocation, meaning we will be creating an array of the Zombie class with a size of `N`.\
 **Functions Use:**\
@@ -82,7 +88,7 @@ int main( void ) {
 
 # ex02
 This exercise is straight forward, the aim is to understand references which seem to be a new concept for new C++ learners.
-**References:**
+## References:
 In C++, a reference is an alias for another variable. It allows you to create a second name for an existing variable, enabling you to access and modify the variable using this new name. References are often used for parameter passing in functions, returning values from functions, and for creating more readable and maintainable code.
 
 A reference must be initialized when it is declared. You can not have an uninitialized reference.
@@ -94,7 +100,7 @@ A reference acts as an alias for another variable. Once a reference is initializ
 References use the `&` symbol in their declaration, but not when they are used.\
 Unlike pointers, references can not be `null`. They must always refer to a valid object.\
 When you use a reference, you do not need to use the dereference operator `(*)`. The compiler automatically dereferences it.\
-**Differences Between Pointers and References:**
+## Differences Between Pointers and References:
 |Feature|Pointers|References|
 |--|--|--|
 |**Syntax**|Use `*` for declaration and `&` for address|Use `&` for declaration|

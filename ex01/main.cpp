@@ -6,13 +6,14 @@
 /*   By: adbouras <adbouras@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 18:27:28 by adbouras          #+#    #+#             */
-/*   Updated: 2024/10/17 11:50:26 by adbouras         ###   ########.fr       */
+/*   Updated: 2024/10/18 19:54:57 by adbouras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
 static void	announce_hord( Zombie* horde, int nbHord );
+static bool	is_digits(const char* str);
 
 int	main( int ac, char **av ) {
 
@@ -20,8 +21,7 @@ int	main( int ac, char **av ) {
 	str		name;
 	Zombie	*horde;
 
-	nbHord = atoi(av[1]);
-	if (ac > 1 && nbHord > 0) {
+	if (ac > 1 && is_digits(av[1]) && (nbHord = atoi(av[1])) > 0) {
 		name = "unamedHorde";
 		if (av[2])
 			name = av[2];
@@ -31,6 +31,17 @@ int	main( int ac, char **av ) {
 	}
 	else
 		std::cout << "The World Is A Better Place." << std::endl;
+}
+
+static bool is_digits(const char* str) {
+    while (*str) {
+        if (!std::isdigit(*str)) {
+			std::cerr << "[" << str << "] is not a valid digit!" << std::endl;
+            return false;
+		}
+        str++;
+    }
+    return true;
 }
 
 static void	announce_hord( Zombie* horde, int nbHord ) {
