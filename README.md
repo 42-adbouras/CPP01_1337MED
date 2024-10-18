@@ -87,10 +87,10 @@ In C++, a reference is an alias for another variable. It allows you to create a 
 
 A reference must be initialized when it is declared. You can not have an uninitialized reference.
 ```cpp
-std::string	str	= "HI THIS IS BRAIN";
+std::string		str	= "HI THIS IS BRAIN";
 std::string	&stringREF	= str;
 ```
-A reference acts as an alias for another variable. Once a reference is initialized to a variable, it cannot be changed to refer to another variable.\
+A reference acts as an alias for another variable. Once a reference is initialized to a variable, it can not be changed to refer to another variable.\
 References use the `&` symbol in their declaration, but not when they are used.\
 Unlike pointers, references can not be `null`. They must always refer to a valid object.\
 When you use a reference, you do not need to use the dereference operator `(*)`. The compiler automatically dereferences it.\
@@ -99,8 +99,8 @@ When you use a reference, you do not need to use the dereference operator `(*)`.
 |--|--|--|
 |**Syntax**|Use `*` for declaration and `&` for address|Use `&` for declaration|
 |**Initialization**|Can be declared without initialization|Must be initialized when declared|
-|**Nullability**|Can be null (i.e., point to nothing)|Cannot be null|
-|**Reassignment**|Can be reassigned to point to different objects|Cannot be reassigned after initialization|
+|**Nullability**|Can be null (i.e., point to nothing)|Can not be null|
+|**Reassignment**|Can be reassigned to point to different objects|Can not be reassigned after initialization|
 |**Dereferencing**|Requires explicit dereferencing using `*`|Automatically dereferenced|
 |**Memory Address**|Stores the address of the object|Acts as an alias to the object|
 |**Pointer Arithmetic**|Supports pointer arithmetic|Does not support pointer arithmetic|
